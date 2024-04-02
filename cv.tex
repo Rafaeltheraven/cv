@@ -121,7 +121,7 @@
     \end{minipage}    
     }
 
-
+\bibliography{citations.bib}
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -162,13 +162,13 @@
 \section{Werk Ervaring}
 
 \begin{joblong}{Web Developer - Netherlands Society of Cinematography}{Jan 2023 - Heden}
-& \hfill \href{https://cinematography.nl}{cinematography.nl} \\[3.75]
 \item Website overgenomen van vorige developer.
 \item Backend ge-streamlined om makkelijker functionaliteit toe te voegen.
 \item Functionaliteit toegevoegd op aanvraag van client.
 \item Versnellen van inladen sommige paginas door betere architectuur.
 \item Security issues gevonden en opgelost.
 \item PHP-based.
+\item \href{https://cinematography.nl}{cinematography.nl}
 \end{joblong}
 
 \begin{jobshort}{Software Development - BRBA}{Feb 2021 - Jul 2021}
@@ -195,33 +195,16 @@ In opdracht van De Winter Information Solutions heb ik een dedicated interface o
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 
 \textbf{Mr Kite's Maginificent Kut-Up Machine} & \hfill \href{https://mkmkm.thebias.nl}{Stream} \\[3.75pt]
-\begin{enumerate}
-    \item Een oneindige audio stream die een grote database aan muziek door elkaar husselt, vervormd, samenvoegd en in korte fragmenten afspeeld.
-    \item Geschreven in Python + QT voor de \href{https://github.com/Rafaeltheraven/Mr-Kite-s-Magnificent-Kut-up-Machine}{GUI} versie.
-\end{enumerate} \\
+\multicolumn{2}{@{}X@{}}{Een oneindige audio stream die een grote database aan muziek door elkaar husselt, vervormd, samenvoegd en in korte fragmenten afspeeld. Geschreven in Python + QT voor de \href{https://github.com/Rafaeltheraven/Mr-Kite-s-Magnificent-Kut-up-Machine}{GUI} versie.}  \\
 
 \textbf{Nethacklang} \\
-\begin{enumerate}
-    \item Compiler voor een zelf-ontworpen ``taal'' geinspireerd door het spel Nethack waarin de developer een level moet ontwerpen om input/output te kunnen doen.
-    \item Geschreven in Haskell.
-\end{enumerate} \\
+\multicolumn{2}{@{}X@{}}{Compiler voor een zelf-ontworpen ``taal'' geinspireerd door het spel Nethack waarin de developer een level moet ontwerpen om input/output te kunnen doen. Geschreven in Haskell.} \\
 
 \textbf{WAGon} & \hfill \href{https://wagon.thebias.nl/}{Documentatie} \\[3.75pt]
-\begin{enumerate}
-    \item Master Thesis Project.
-    \item DSL om Weighted Attribute Grammars in te definiëren.
-    \item Ecosysteem om met deze DSL te kunnen werken.
-    \item GLL-based parser generator als proof-of-concept voor de DSL en het ecosysteem.
-    \item Geschreven in Rust.
-\end{enumerate} \\
+\multicolumn{2}{@{}X@{}}{Master Thesis Project. Een DSL om Weighted Attribute Grammars in te definiëren, een ecosysteem om met deze DSL te kunnen werken en een GLL-based parser generator als proof-of-concept voor de DSL en het ecosysteem. Geschreven in Rust.} \\
 
-\textbf{The Propaganda Machine} & \hfill \href{https://ieee-cog.org/2021/assets/papers/paper_231.pdf}{Paper}\cite{dulfer-propaganda-2021} \\[3.75pt]
-\begin{enumerate}
-    \item Bachelor Thesis Project.
-    \item Schrijft automatische propaganda gebaseerd op gespeelde potjes Risk.
-    \item Onderzoek naar effectiviteit van simpel automatisch gegenereerde propaganda.
-    \item Geschreven in Python + Java.
-\end{enumerate} \\
+\textbf{The Propaganda Machine} & \hfill \href{https://ieee-cog.org/2021/assets/papers/paper_231.pdf}{Paper} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Bachelor Thesis Project. Schrijft automatische propaganda gebaseerd op gespeelde potjes Risk. Onderzoek naar effectiviteit van simpel automatisch gegenereerde propaganda. Geschreven in Python + Java.} \\
 
 \end{tabularx}
 
@@ -230,21 +213,21 @@ In opdracht van De Winter Information Solutions heb ik een dedicated interface o
 %----------------------------------------------------------------------------------------
 \section{Opleiding}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2021 - Heden & Msc, Software Technology, \textbf{Universiteit Twente} \\
+2021 - Heden & Msc, Software Technology\hfill \textbf{Universiteit Twente} \\
 
-2017 - 2012 & Bsc, Technical Computer Science, \textbf{Universiteit Twente} \\ 
+2017 - 2012 & Bsc, Technical Computer Science\hfill \textbf{Universiteit Twente} \\ 
 
-2019 - 2020 & Minor New Media Language, \textbf{Kaunas University of Technlogy} \\
+2019 - 2020 & Minor New Media Language\hfill \textbf{Kaunas University of Technlogy} \\
 
-2018 - 2019 & Bsc of Honours, Philosophy, \textbf{Universiteit Twente} \\
+2018 - 2019 & Bsc of Honours, Philosophy\hfill \textbf{Universiteit Twente} \\
 
-2014 - 2017 & IB English A Language \& Literature, \textbf{Het Berlage Lyceum} \\
+2014 - 2017 & IB English A Language \& Literature \hfill \textbf{Het Berlage Lyceum} \\
 
-2017 - VWO E\&M, \textbf{Het Berlage Lyceum} \\
+2017 & VWO E\&M \hfill \textbf{Het Berlage Lyceum} \\
 
-2015 & Summer Course Computer Science, \textbf{Oxford University} \\
+2015 & Summer Course Computer Science \hfill \textbf{Oxford University} \\
 
-2014 & Junior TTO Certificate, \textbf{Cambridge Education Group} \\
+2014 & Junior TTO Certificate \hfill \textbf{Cambridge Education Group} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -252,32 +235,32 @@ In opdracht van De Winter Information Solutions heb ik een dedicated interface o
 %----------------------------------------------------------------------------------------
 \section{Publicaties}
 \begin{refsection}[citations.bib]
-\nocite{*}
 \printbibliography[heading=none]
+\nocite{*}
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Vaardigheden}
-\begin{enumerate}
+\begin{itemize}
     \item Programmeertalen:
-        \begin{enumerate}
+        \begin{itemize}
             \item Python
             \item PHP
             \item Rust
             \item Java
             \item Haskell
             \item JavaScript
-        \end{enumerate}
+        \end{itemize}
     \item Reguliere Talen:
-        \begin{enumerate}
+        \begin{itemize}
             \item Nederlands
             \item Engels
-        \end{enumerate}
+        \end{itemize}
     \item Linux
     \item Server Hosting
-\end{enumerate}
+\end{itemize}
 
 \vfill
 \center{\footnotesize Last updated: \today}
