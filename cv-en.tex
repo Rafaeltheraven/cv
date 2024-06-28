@@ -1,0 +1,273 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+\bibliography{citations.bib}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Ir. Rafael Malach Dulfer, MSc} \\[7.5pt]
+\href{https://github.com/rafaeltheraven}{\raisebox{-0.05\height}\faGithub\ Rafaeltheraven} \ $|$ \ 
+\href{https://linkedin.com/in/rafael-dulfer-b60a32111/}{\raisebox{-0.05\height}\faLinkedin\ Rafael Dulfer} \ $|$ \ 
+\href{https://dulfer.be}{\raisebox{-0.05\height}\faGlobe \ dulfer.be} \ $|$ \ 
+\href{mailto:rafael@dulfer.be}{\raisebox{-0.05\height}\faEnvelope \ rafael@dulfer.be} \ $|$ \ 
+\href{tel:+31616935305}{\raisebox{-0.05\height}\faMobile \ +316.169.353.05} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Interesses}
+\begin{itemize}
+\item Programming Language Design
+\item Automation
+\item Software Architecture
+\item Modernizing
+\item Open-Source
+\end{itemize}
+
+%Experience
+\section{Experience}
+
+\begin{joblong}{Web Developer - Netherlands Society of Cinematography}{Jan 2023 - Now}
+\item Took over development from previous developer
+\item Streamlined backend to simplify addition of new features
+\item Added new features as required
+\item Increased page load speed by up to 3x on some pages
+\item Fixed security issues
+\item PHP-based.
+\item \href{https://cinematography.nl}{cinematography.nl}
+\end{joblong}
+
+\begin{jobshort}{Software Development - BRBA}{Feb 2021 - Jul 2021}
+For the period of February - July 2021 I worked on the \href{https://www.ronroozendaal.nl/blog/2021/05/een-nieuw-registratiesysteem-in-een-paar-weken-tijd}{BRBA} vaccination registration project for the Dutch Ministry of Health Welfare and Sport (MinVWS). I concerned myself with various tasks, ranging from validation+encryption, integration testing and the streamlining of build processess.
+\end{jobshort}
+
+\begin{jobshort}{Software Development - Serious Game Automatisering}{Jun 2019 - Aug 2019}
+I was comissioned by De Winter Information Solution to created a dedicated interface to streamline and partially automate the ``hosting'' of a serious game for the Association of Dutch Municipalities (VNG).
+\end{jobshort}
+
+\begin{joblong}{Web Developer - Anubis}{Jan 2021 - Apr 2022}
+\item Online examination system for the University of Twente
+\item Used by the courses Network Systems and Web Science.
+\item Self-designed Markdown dialect + parser to define structure of exams 
+\item 100+ students loading and using at the same time with low tolerance for failure
+\item PHP-based.
+\end{joblong}
+  
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+
+\textbf{Mr Kite's Maginificent Kut-Up Machine} & \hfill \href{https://mkmkm.thebias.nl}{Stream} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{An infinite audio stream the takes a large database of music, shuffles it, manipulates it, cuts it up and glues it back together to play in short fragments. Written in Python (+ QT for the local \href{https://github.com/Rafaeltheraven/Mr-Kite-s-Magnificent-Kut-up-Machine}{GUI} version).}  \\
+
+\textbf{Nethacklang} \\
+\multicolumn{2}{@{}X@{}}{Parser + Compiler for an esolang inspired by the game Nethack, in which a developer must design a level as well as a player agent that interacts with the environment in order to do I/O. Written in Haskell.} \\
+
+\textbf{WAGon} & \hfill \href{https://wagon.thebias.nl/}{Documentation} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Master's Thesis Project. A DSL to defined Weighted Attribute Grammars, an ecosystem to use this DSL and a GLL-based parser generator to show how to use it. Written in Rust. 9.0 final grade.} \\
+
+\textbf{The Propaganda Machine} & \hfill \href{https://ieee-cog.org/2021/assets/papers/paper_231.pdf}{Paper} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Bachelor's Thesis Project. Program that automatically writes propaganda pieces based on a game of Risk. Research done on the effectiveness of simple automatically generated propaganada. Written in Python + Java.} \\
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2021 - 2024 & MSc, Software Technology\hfill \textbf{Universiteit Twente} \\
+
+2017 - 2021 & BSc, Technical Computer Science\hfill \textbf{Universiteit Twente} \\ 
+
+2019 - 2020 & Minor New Media Language\hfill \textbf{Kaunas University of Technology} \\
+
+2018 - 2019 & BSc of Honours, Philosophy\hfill \textbf{Universiteit Twente} \\
+
+2014 - 2017 & IB English A Language \& Literature \hfill \textbf{Het Berlage Lyceum} \\
+
+2017 & VWO E\&M \hfill \textbf{Het Berlage Lyceum} \\
+
+2015 & Summer Course Computer Science \hfill \textbf{Oxford University} \\
+
+2014 & Junior TTO Certificate \hfill \textbf{Cambridge Education Group} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Publications}
+\begin{refsection}[citations.bib]
+\printbibliography[heading=none]
+\end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{itemize}
+    \item Programming Languages:
+        \begin{itemize}
+            \item Python
+            \item PHP
+            \item Rust
+            \item Java
+            \item Haskell
+            \item JavaScript
+        \end{itemize}
+    \item Natural Talen:
+        \begin{itemize}
+            \item Nederlands
+            \item Engels
+        \end{itemize}
+    \item Linux
+    \item Server Hosting
+    \item Git
+    \item Scrum
+\end{itemize}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
